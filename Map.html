@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+    let num = [4,25,9];
+    let arr = num.map(Math.sqrt);
+    let sq = num.map(Square);
+    function Square(number){
+        return number*number;
+    }
+    document.getElementById("demo").innerHTML="Square Root : "+arr+"<br>"+"Square : "+sq;
+        </script>
+    </body>
+</html>

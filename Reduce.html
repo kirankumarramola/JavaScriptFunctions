@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+        const x = [100,20,30];
+        function check(total,num){
+            return total - num;
+        }
+        document.getElementById("demo").innerHTML= x.reduce(check) ;
+        </script>
+    </body>
+</html>

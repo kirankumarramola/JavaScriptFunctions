@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>Use of setTimeout() Function</p>
+    <button onclick="Msg()">Get Message</button>
+    <hr></hr>
+    <p>Use of setTimeout() and clearTimeout() Functions</p>
+    <p>click below Button to get a popup in 5 seconds</p>
+    <button onclick = "getMsg()">Get Popup</button>
+    <button onclick = "stopMsg()">Cancel</button>
+    <hr></hr>
+    <p>Use of setInterval() and clearInterval() Functions</p>
+    <h1>Clock</h1>
+    <button onclick = "start()">Show Time</button>
+    <button onclick = "stop()">Stop the Time</button>
+    <h2 id="demo"></h2>
+
+<script>
+    function Msg(){
+        document.write("Hello");
+    document.write("<br>");
+  
+    setTimeout(() => {
+        document.write("This is Timed Msg");
+    }, 3000);
+    }
+
+    function getMsg(){
+        id = setTimeout(function(){alert("HELLO")},5000);
+    }
+    function stopMsg(){
+        clearTimeout(id);
+    }
+
+    function start(){
+     id = setInterval(myFunction, 1000);
+    
+    }
+    function stop(){
+        clearInterval(id);
+    }
+    
+function myFunction() {
+  let d = new Date();
+  document.getElementById("demo").innerHTML=
+  d.getHours() + ":" +
+  d.getMinutes() + ":" +
+  d.getSeconds();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+         Array.prototype.low = function() {
+            for (let i = 0; i < this.length; i++) {
+             this[i] = this[i].toLowerCase();
+             }
+            };
+        const arr = ["A","B","C","D","E"];
+        arr.low();
+        document.getElementById("demo").innerHTML= arr ;
+        </script>
+    </body>
+</html>

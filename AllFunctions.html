@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div>
+        <p id="demo"></p>
+    </div>
+    <script>
+    Map();
+    function Map(){
+    console.log("map()");
+    let num = [4,25,9];
+    let arr = num.map(Math.sqrt);
+    let sq = num.map(Square);
+    function Square(number){
+        return number*number;
+    }
+    console.log("Square Root : "+arr);
+    console.log("Square : "+sq);
+}
+    Find();
+    function Find(){
+        console.log("find()");
+        let num =[2,5,7,-9,15];
+        function check(num){
+            //return num < 0;
+            return num == 7;
+        }
+        console.log(num.find(check));
+    }
+    Filter();
+    function Filter(){
+        console.log("filter()");
+        let num =[-2,5,-5,7,-9,15];
+        function check(num){
+            return num < 0;
+        }
+        console.log(num.filter(check));
+    }
+    FindIndex();
+    function FindIndex(){
+        console.log("findIndex()");
+        let num =[9,66,45,7,8];
+        function check(num){
+            return num =="8";
+        }
+        console.log(num.findIndex(check));
+    }
+    Sort();
+    function Sort(){
+        console.log("sort()");
+        let num =[-2,5,-5,7,-9,15];
+        console.log(num.sort());
+    }
+    IndexOf();
+    function IndexOf(){
+        console.log("indexOf()");
+        let car = ["Audi","BMW","Ford","Volvo","BMW"];
+        //console.log(car.indexOf("BMW"));
+        console.log(car.indexOf("BMW",2));
+    }
+    ForEach();
+    function ForEach(){
+        console.log("forEach()");
+        let car = ["BMW","Audi","Ford"];
+        car.forEach(print);
+        function print(x){
+            console.log(x);
+        }
+    }
+    Fill();
+    function Fill(){
+        console.log("fill()");
+        let fruits = ["mango","banana","apple","orange"];
+        //fruits.fill("pineapple",2,4);
+        fruits.fill("pineapple");
+        console.log(fruits);
+    }
+    Concat();
+    function Concat(){
+        console.log("concat()");
+        const a = [1,2,3,4,5];
+        const b = [6,7,8,9,10];
+        const c = [11,12];
+       // const x = a.concat(b);
+       const x = a.concat(b,c);
+        console.log(x);
+    }
+    Slice();
+    function Slice(){
+        console.log("slice()");
+        let car = ["Audi","BMW","Ford","Volvo","Nissan"];
+        let x = car.slice(2,4);
+        //let x = car.slice(-3,-2);
+        console.log(x);
+    }
+    Every();
+    function Every(){
+        console.log("every()");
+        let age = [22,25,46,15,19];
+        function check(x){
+            return x>18;
+        }
+        console.log(age.every(check));
+    }
+    Reverse();
+    function Reverse(){
+        console.log("reverse()");
+        let num = [1,2,3,4,5];
+        console.log(num.reverse());
+    }
+    Push();
+    function Push(){
+        console.log("push()");
+        let x = ["a","b","c","d"];
+        x.push("x","y","z");
+        console.log(x);
+    }
+    Includes();
+    function Includes(){
+        console.log("includes()");
+        let x = ["a","b","c","d"];
+        console.log(x.includes("b"));
+        //console.log(x.includes("b",2));
+    }
+    Pop();
+    function Pop(){
+        console.log("pop()");
+        const x = ["Hp","Asus","Dell","Lenovo"];
+        console.log("Removed element : "+x.pop());
+        console.log(x);
+    }
+    Join();
+    function Join(){
+        console.log("join()");
+        const x = [1,2,3,4,5,6];
+        const res = x.join(" & ");
+        console.log(res);
+    }
+    Shift();
+    function Shift(){
+        console.log("shift()");
+        const x = ["Hp","Asus","Dell","Lenovo"];
+        console.log("Removed element : "+x.shift());
+        console.log(x);
+    }
+    Reduce();
+    function Reduce(){
+        console.log("reduce()");
+        const x = [100,20,30];
+        console.log(x.reduce(check));
+        function check(total,num){
+            return total - num;
+        }
+    }
+    Unshift();
+    function Unshift(){
+        console.log("unshift()");
+        const ch = ["a","b","c","d"];
+        ch.unshift("x","y");
+        console.log(ch);
+    }
+    Constructor();
+    function Constructor(){
+        console.log("constructor()");
+        const num = [1,2,3,4,5];
+        console.log(num.constructor);
+    }
+    CopyWithin();
+    function CopyWithin(){
+        console.log("copyWithin()");
+        const cars = ["Audi","BMW","Ford","Volvo","Nissan"];
+        console.log(cars.copyWithin(3,1,5));
+    }
+    Entries();
+    function Entries(){
+        console.log("entries()");
+        const arr = ["a","b","c","d","e"];
+        const ch = arr.entries();
+        let res = "";
+        for(let x of ch){
+        res += x + "<br>";
+        }
+        //document.write(res);
+        console.log(res);
+    }
+    From();
+    function From(){
+        console.log("from()");
+        const text = "Hello World";
+        console.log(Array.from(text));
+    }
+    IsArray();
+    function IsArray(){
+        console.log("isArray()");
+        const x = "hello";
+        const y = ["h","e","l","l","o"];
+        console.log(Array.isArray(x));
+        console.log(Array.isArray(y));
+    }
+    Keys();
+    function Keys(){
+        console.log("keys()");
+        const ch = ["a","b","c","d","e"];
+        const key = ch.keys();
+        let res = "";
+        for(let x of key){
+            res += x +"<br>";
+        } 
+        console.log(res);
+        //document.write(res);
+    }
+    LastIndexOf();
+    function LastIndexOf(){
+        console.log("lastIndexOf()");
+        const num = [1,2,3,2,1,];
+        const str = "hello";
+        console.log(num.lastIndexOf(2));
+        console.log(str.lastIndexOf("l"));
+
+    }
+    Length();
+    function Length(){
+        console.log("length");
+        const num = [1,2,3,2,1,];
+        const str = "helloWorld";
+        console.log(num.length);
+        console.log(str.length);
+    }
+    Prototype();
+    function Prototype(){
+        console.log("prototype");
+        Array.prototype.low = function() {
+            for (let i = 0; i < this.length; i++) {
+             this[i] = this[i].toLowerCase();
+             }
+            };
+        const arr = ["A","B","C","D","E"];
+        arr.low();
+        console.log(arr);
+    }
+    ReduceRight();
+    function ReduceRight(){
+        console.log("reduceRight()");
+        const x = [100,20,30];
+        console.log(x.reduceRight(check));
+        function check(total,num){
+            return total - num;
+        }
+    }
+    Some();
+    function Some(){
+        console.log("some()");
+        let age = [22,25,46,15,19];
+        function check(x){
+            return x>18;
+        }
+        console.log(age.some(check));
+    }
+    Splice();
+    function Splice(){
+        console.log("splice()");
+        let ch =["a","b","c","d"];
+        //ch.splice(2,1); //to remove
+        ch.splice(2,0,"x","y"); //to add
+        console.log(ch);
+    }
+    ToString();
+    function ToString(){
+        console.log("toString()");
+        let cars = ["Audi","BMW","Ford","Volvo","Nissan"];
+        let str = cars.toString();
+        console.log(str);
+    }
+    ValueOf();
+    function ValueOf(){
+        console.log("valueOf()");
+        const x = [10,20,30];
+        const y = x.valueOf(); //we can also use y = x directly
+        console.log(y);
+    }
+
+
+    </script>
+</body>
+</html>
