@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2 id="demo"></h2>
+<p id="p"></p>
+
+<script>
+async function myPromise() {
+  let prom = new Promise(function(resolve,reject) {
+    resolve("Resolve");
+    //reject("Rejected");
+  });
+  prom.then(
+  function(value){document.getElementById("p").innerHTML=value;},
+  function(err){document.getElementById("p").innerHTML=err;}
+  );
+  document.getElementById("demo").innerHTML = await prom;
+}
+
+myPromise();
+</script>
+
+</body>
+</html>

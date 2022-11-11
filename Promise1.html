@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Enter number between 1 to 10</p>
+        <input id="in"/>
+        <button onclick="myPromise()">Submit</button>
+        <p id="demo"></p>
+        <script>
+        let elem = document.getElementById("demo") ;
+        function myPromise(){
+            let prom = new Promise(function(resolve,reject){
+                let val = document.getElementById("in").value;
+                if(val <= 10 && val>0)
+                resolve("Valid Input");
+                else
+                reject("Invalid Input")
+            });
+            prom.then(
+                function(value){elem.innerHTML=value;},
+                function(err){elem.innerHTML=err;}
+            );
+        }
+        </script>
+    </body>
+</html>
